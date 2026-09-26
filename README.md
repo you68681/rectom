@@ -117,7 +117,7 @@ defaults.  For model names containing `qwen`, it uses temperature `1.0`, top-p
 Hi-ToM:
 
 ```bash
-hitom-llm run \
+rectom run \
   --data-path ./Hi-ToM_data.json \
   --output-dir ./outputs/hitom_gpt54 \
   --provider openai \
@@ -129,7 +129,7 @@ hitom-llm run \
 FanToM:
 
 ```bash
-hitom-llm run \
+rectom run \
   --data-path ./fantom.json \
   --output-dir ./outputs/fantom_gpt54 \
   --provider openai \
@@ -141,7 +141,7 @@ hitom-llm run \
 Big-ToM true-belief and false-belief subsets are run separately:
 
 ```bash
-hitom-llm run \
+rectom run \
   --data-path ./conditions/0_forward_belief_true_belief/stories.csv \
   --output-dir ./outputs/bigtom_true_gpt54 \
   --provider openai \
@@ -149,7 +149,7 @@ hitom-llm run \
   --dataset-type bigtom \
   --max-workers 4
 
-hitom-llm run \
+rectom run \
   --data-path ./conditions/1_forward_belief_false_belief/stories.csv \
   --output-dir ./outputs/bigtom_false_gpt54 \
   --provider openai \

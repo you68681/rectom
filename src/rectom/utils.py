@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Sequence, Set, Tuple,Optional
 
-from hitom_llm.models import ChoiceSet
+from rectom.models import ChoiceSet
 
 logger = logging.getLogger(__name__)
 

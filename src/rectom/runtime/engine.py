@@ -3,9 +3,9 @@ import re
 import logging
 from typing import Dict, List, Sequence, Set
 from typing import Sequence
-from hitom_llm.models import DeltaGenerationResult, StorySample,ActionEffectResult,ExitStepsResult,FinalStateResult_Bigtom,StepDelta,ValidationIssue,ValidationResult,QuestionReductionResult
-from hitom_llm.parsers import parse_answer_result, parse_delta_result, parse_observation_mask, parse_single_step_delta,parse_action_effect,normalize_fact_list, normalize_action_list,parse_final_state_result,parse_exit_steps,parse_final_state_result_bigtom,parse_initial_participants,parse_final_state_result_fantom,parse_final_state_result_fantom_v2,parse_question_reduction_result
-from hitom_llm.prompts.templates import (
+from rectom.models import DeltaGenerationResult, StorySample,ActionEffectResult,ExitStepsResult,FinalStateResult_Bigtom,StepDelta,ValidationIssue,ValidationResult,QuestionReductionResult
+from rectom.parsers import parse_answer_result, parse_delta_result, parse_observation_mask, parse_single_step_delta,parse_action_effect,normalize_fact_list, normalize_action_list,parse_final_state_result,parse_exit_steps,parse_final_state_result_bigtom,parse_initial_participants,parse_final_state_result_fantom,parse_final_state_result_fantom_v2,parse_question_reduction_result
+from rectom.prompts.templates import (
     build_answer_prompt,
     build_answer_repair_prompt,
 build_answer_prompt_bigtom,
@@ -67,7 +67,7 @@ build_question_reduction_prompt,
 build_question_reduction_repair_prompt,
 
 )
-from hitom_llm.runtime.validation import (
+from rectom.runtime.validation import (
     apply_delta,
     apply_state_delta,
     apply_action_delta,
@@ -96,7 +96,7 @@ validate_final_state_result_fantom_v2,
 validate_generation_result_bigtom,
 validate_question_reduction,
 )
-from hitom_llm.utils import (
+from rectom.utils import (
     extract_question_characters,
     extract_question_characters_fantom,
     fill_perspective_from_observation,

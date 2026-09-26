@@ -3,8 +3,8 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from hitom_llm.clients.token_logger import TokenUsageLogger
-from hitom_llm.clients.trace_logger import LLMTraceLogger
+from rectom.clients.token_logger import TokenUsageLogger
+from rectom.clients.trace_logger import LLMTraceLogger
 
 
 def _build_token_logger() -> TokenUsageLogger | None:
@@ -44,7 +44,7 @@ def build_client(provider: str, model: str):
     trace_logger = _build_trace_logger()
 
     if provider in {"openai", "vllm", "openai_compatible", "qwen", "gemma"}:
-        from hitom_llm.clients.openai_client import OpenAIChatClient
+        from rectom.clients.openai_client import OpenAIChatClient
 
         temperature, top_p, top_k = _open_source_sampling(provider, model)
         return OpenAIChatClient(
@@ -60,7 +60,7 @@ def build_client(provider: str, model: str):
         )
 
     if provider == "gemini":
-        from hitom_llm.clients.gemini_client import GeminiChatClient
+        from rectom.clients.gemini_client import GeminiChatClient
 
         return GeminiChatClient(
             model=model,

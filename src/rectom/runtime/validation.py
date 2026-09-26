@@ -4,7 +4,7 @@ import re
 from collections import defaultdict
 from typing import Dict, List, Optional, Sequence, Set, Iterable
 
-from hitom_llm.models import (
+from rectom.models import (
     DeltaGenerationResult,
     ObservationMaskResult,
     StepDelta,
@@ -19,7 +19,7 @@ ApplyActionsToStateResultFantom,
     ApplyActionToStateResultFantom,
     QuestionReductionResult,
 )
-from hitom_llm.utils import (
+from rectom.utils import (
     extract_story_characters,
     parse_fact,
     parse_choices,

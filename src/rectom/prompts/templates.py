@@ -3,8 +3,8 @@ from __future__ import annotations
 import json
 from typing import List, Optional, Sequence, Set
 
-from hitom_llm.models import StepDelta, StorySample, ValidationIssue
-from hitom_llm.utils import states_to_pretty_json
+from rectom.models import StepDelta, StorySample, ValidationIssue
+from rectom.utils import states_to_pretty_json
 
 ASSUMPTIONS = """
 You should assume the following.

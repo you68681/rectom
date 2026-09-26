@@ -4,8 +4,8 @@ from typing import Optional
 
 from openai import OpenAI, APIConnectionError
 
-from hitom_llm.clients.token_logger import TokenUsageLogger, TokenUsageRecord
-from hitom_llm.clients.trace_logger import LLMTraceLogger, infer_call_type
+from rectom.clients.token_logger import TokenUsageLogger, TokenUsageRecord
+from rectom.clients.trace_logger import LLMTraceLogger, infer_call_type
 
 
 class OpenAIChatClient:

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Set
 
-from hitom_llm.models import DeltaGenerationResult, ObservationMaskResult, StepDelta, ActionEffectResult,FinalStateResult,ExitStepsResult,FinalStateResult_Bigtom,InitialParticipantsResult,ApplyActionsToStateResultFantom,StateTraceStepFantom,ApplyActionToStateResultFantom,QuestionReductionResult
-from hitom_llm.utils import extract_json_block, normalize_bool_sequence
+from rectom.models import DeltaGenerationResult, ObservationMaskResult, StepDelta, ActionEffectResult,FinalStateResult,ExitStepsResult,FinalStateResult_Bigtom,InitialParticipantsResult,ApplyActionsToStateResultFantom,StateTraceStepFantom,ApplyActionToStateResultFantom,QuestionReductionResult
+from rectom.utils import extract_json_block, normalize_bool_sequence
 
 
 def parse_delta_result(raw_text: str) -> DeltaGenerationResult:

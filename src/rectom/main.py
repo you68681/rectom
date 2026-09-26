@@ -11,15 +11,15 @@ from typing import Dict, List, Set
 
 import pandas as pd
 
-from hitom_llm.clients.factory import build_client
-from hitom_llm.models import StorySample
-from hitom_llm.runtime.engine import (
+from rectom.clients.factory import build_client
+from rectom.models import StorySample
+from rectom.runtime.engine import (
     SequentialBigToMEngine,
     SequentialFanToMEngine,
     SequentialHiToMEngine,
 )
 
-from hitom_llm.utils import ensure_dir, load_json
+from rectom.utils import ensure_dir, load_json
 
 GLOBAL_SEED = 42
 

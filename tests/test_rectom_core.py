@@ -2,23 +2,23 @@ from __future__ import annotations
 
 import unittest
 
-from hitom_llm.clients.trace_logger import infer_call_type
-from hitom_llm.models import (
+from rectom.clients.trace_logger import infer_call_type
+from rectom.models import (
     DeltaGenerationResult,
     StepDelta,
     StorySample,
     ValidationIssue,
     ValidationResult,
 )
-from hitom_llm.main import (
+from rectom.main import (
     split_story_into_sentences_from_period,
     split_story_into_steps_from_newline,
 )
-from hitom_llm.prompts.templates import (
+from rectom.prompts.templates import (
     build_delta_prompt,
     build_step_repair_prompt,
 )
-from hitom_llm.runtime.engine import (
+from rectom.runtime.engine import (
     SequentialFanToMEngine,
     SequentialHiToMEngine,
     _action_is_effective_for_character,
@@ -31,9 +31,9 @@ from hitom_llm.runtime.engine import (
     _reduce_question_with_llm,
     _restore_delta_source_alignment,
 )
-from hitom_llm.runtime.validation import apply_delta, apply_state_delta
-from hitom_llm.runtime.validation import validate_answer_choice_bigtom
-from hitom_llm.utils import fill_perspective_from_observation, parse_fact
+from rectom.runtime.validation import apply_delta, apply_state_delta
+from rectom.runtime.validation import validate_answer_choice_bigtom
+from rectom.utils import fill_perspective_from_observation, parse_fact
 
 
 class PerspectiveCompletionTests(unittest.TestCase):
