@@ -1,0 +1,12 @@
+{
+  "num_samples": 1,
+  "num_processed": 1,
+  "num_remaining": 0,
+  "num_correct": 1,
+  "accuracy": 1.0,
+  "provider": "openai",
+  "model": "gpt-5-nano",
+  "status": "finished",
+  "resume_enabled": true,
+  "max_workers": 1
+}

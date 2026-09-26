@@ -1,0 +1,11 @@
+name: hitom-llm
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - google-genai>=1.0.0
+      - openai>=1.40.0
+      - pandas>=2.0.0

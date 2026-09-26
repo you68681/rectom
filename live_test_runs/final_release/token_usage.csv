@@ -1,0 +1,9 @@
+timestamp,provider,model,call_type,prompt_tokens,completion_tokens,total_tokens,cached_tokens,reasoning_tokens,success,error
+1790407537.3968608,openai,gpt-5-nano,delta_generation,949,965,1914,0,0,True,
+1790407538.6528058,openai,gpt-5-nano,state_observation_mask,1660,127,1787,1536,0,True,
+1790407540.1273441,openai,gpt-5-nano,state_observation_repair,1675,133,1808,1536,0,True,
+1790407541.785439,openai,gpt-5-nano,action_observation_mask,889,151,1040,0,0,True,
+1790407543.203535,openai,gpt-5-nano,action_observation_repair,1138,151,1289,0,0,True,
+1790407544.7926662,openai,gpt-5-nano,action_observation_repair,1138,157,1295,0,0,True,
+1790407545.703087,openai,gpt-5-nano,question_reduction,202,52,254,0,0,True,
+1790407546.7760699,openai,gpt-5-nano,answer,194,84,278,0,0,True,

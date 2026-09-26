@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hitom-llm"
+version = "0.1.0"
+description = "Sequential Hi-ToM pipeline with delta-state generation, validation, and repair"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "google-genai>=1.0.0",
+  "openai>=1.40.0",
+  "pandas>=2.0.0",
+]
+
+[project.scripts]
+hitom-llm = "hitom_llm.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
