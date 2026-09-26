@@ -19,14 +19,6 @@ from hitom_llm.runtime.engine import (
     SequentialHiToMEngine,
 )
 
-from hitom_llm.runtime.baseline_engine import (
-    SequentialHiToMCoTEngine,
-    SequentialBigToMCoTEngine,
-    SequentialFanToMCoTEngine,
-)
-
-import random
-
 from hitom_llm.utils import ensure_dir, load_json
 
 GLOBAL_SEED = 42
@@ -448,12 +440,6 @@ def process_one_sample(sample, provider: str, model: str, dataset_type: str, deb
         engine = SequentialBigToMEngine(llm_client=client, debug=debug)
     elif dataset_type == "fantom":
         engine = SequentialFanToMEngine(llm_client=client, debug=debug)
-    elif dataset_type == "hitom_CoT":
-        engine = SequentialHiToMCoTEngine(llm_client=client, debug=debug)
-    elif dataset_type == "bigtom_CoT":
-        engine = SequentialBigToMCoTEngine(llm_client=client, debug=debug)
-    elif dataset_type == "fantom_CoT":
-        engine = SequentialFanToMCoTEngine(llm_client=client, debug=debug)
     else:
         raise ValueError(f"Unsupported dataset_type: {dataset_type}")
 

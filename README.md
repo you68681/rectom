@@ -15,8 +15,8 @@ Processing (EMNLP 2026 Findings)
 
 - arXiv: https://arxiv.org/abs/2606.11724
 
-The implementation preserves the original project's detailed Hi-ToM,
-FanToM, Big-ToM, baseline, validation, repair, retry, and logging paths.  The
+The implementation contains the Hi-ToM, FanToM, and Big-ToM RECTOM pipelines,
+including validation, repair, retry, and logging. The
 main RECTOM engines use two aligned tracks:
 
 - a persistent state track containing the accumulated symbolic world state;
@@ -64,14 +64,6 @@ Python 3.11 or newer is required.
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -e .
-```
-
-Alternatively:
-
-```bash
-conda env create -f environment.yml
-conda activate hitom-llm
 python -m pip install -e .
 ```
 
@@ -200,5 +192,3 @@ Each run writes:
   observation masks, completed perspectives, prediction, and validation
   errors;
 - `summary.json`, including processed counts, accuracy, provider, and model.
-
-Existing baseline implementations remain under `src/hitom_llm/baselines/`.
